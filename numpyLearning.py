@@ -216,11 +216,43 @@ print(np.vstack([v1,v2]))
 #Apilar horizontalmente
 print(np.hstack([v1,v2]))
 
+#Indexacion de un array
+abc = np.array([1,2,3,4,5,6,7,8,9])
+print(abc[[1,2,8]])
+
+
 """IMPORTAR INFORMACION DESDE UN ARCHIVO UTILIZANDO NUMPY"""
 
 
 #Cargar un archivo de texto
 print("-----------------")
 
-filedatatxt = np.genfromtxt('data.txt', delimiter=',')
-print(filedatatxt)
+filedatanumerictxt = np.genfromtxt('datanumeric.txt', delimiter=',')
+print(filedatanumerictxt)
+print("-----------------")
+
+print(filedatanumerictxt.astype('int32'))
+print("-----------------")
+#Obtiene los valores que cumplan las condiciones
+#Los imprime con True y False
+print(filedatanumerictxt>70)
+
+#Imprime los valores en un array que cumplan las condiciones
+print(filedatanumerictxt[filedatanumerictxt>70])
+
+
+#Copiar un array de manera profunda
+print("-----------------")
+copyfiledata = filedatanumerictxt[filedatanumerictxt.copy()>75]
+print(copyfiledata)
+
+
+
+#Si intentamos cargar un archivo de texto con datos con caracteres especiales
+#Nos dara un error, ya que no puede convertirlos a numeros y lo que sucede es que 
+#El error que presenta es que existen mas columnas en una fila que en otra
+
+#filedata = np.genfromtxt('data.txt', delimiter=',')
+#print(filedata)
+
+#Para evitar este tipo de errores se recomienda mejor utilizar pandas
