@@ -1,0 +1,101 @@
+Language,Family,Region,Speakers,Writing System,ISO Code
+Yoruba,Indo-European,India,76000000,Latin,om
+Southern Min,Indo-European,India,47000000,Latin,ru
+Yue (Cantonese),Dravidian,India,75000000,Devanagari,my
+Spanish,Austronesian,Poland,76900000,Devanagari,it
+Arabic,Indo-European,Worldwide,76000000,Hangul,ur
+Awadhi,Kra-Dai,Vietnam,57000000,Latin,it
+Wu (Shanghainese),Koreanic,China,22000000,Simplified Chinese,bn
+Yue (Cantonese),Afro-Asiatic,Worldwide,26000000,Devanagari,hak
+Javanese,Dravidian,Nigeria,23000000,Perso-Arabic,ta
+Italian,Indo-European,Philippines,60000000,Hangul,ig
+German,Turkic,China,27000000,Latin,fr
+English,Dravidian,India,83000000,Traditional Chinese,yue
+Romanian,Indo-European,"Portugal, Brazil",47000000,Perso-Arabic,th
+Marathi,Sino-Tibetan,Nigeria,67000000,Hangul,uz
+Malayalam,Indo-European,Worldwide,35000000,Latin,ps
+Bengali,Sino-Tibetan,Romania,25000000,Bengali,fa
+Bhojpuri,Sino-Tibetan,China,77000000,Burmese,om
+Ukrainian,Niger-Congo,"Pakistan, India",128000000,Tamil,ro
+Amharic,Turkic,Indonesia,341000000,Telugu,pt
+Burmese,Kra-Dai,"Russia, Eastern Europe",25000000,Traditional Chinese,nan
+Hausa,Indo-European,"Portugal, Brazil",32000000,Latin,hak
+Burmese,Austroasiatic,India,460000000,Chinese,ur
+Marathi,Kra-Dai,Korea,50000000,Latin,hak
+Vietnamese,Niger-Congo,China,69000000,Latin,ha
+English,Afro-Asiatic,China,50000000,Burmese,ro
+Arabic,Indo-European,Indonesia,50000000,Latin,th
+Pashto,Sino-Tibetan,China,34000000,Latin,ml
+Tamil,Austronesian,China,50000000,Latin,sd
+Japanese,Indo-European,"Afghanistan, Pakistan",82000000,Hangul,bho
+Tagalog,Sino-Tibetan,India,26000000,"Shahmukhi, Gurmukhi",ur
+Hakka,Turkic,"Germany, Austria",67000000,Telugu,cjy
+Pashto,Indo-European,China,125000000,Latin,az
+Uzbek,Dravidian,Azerbaijan,73000000,"Kanji, Hiragana, Katakana",de
+Kannada,Afro-Asiatic,"India, Pakistan",50000000,Latin,nan
+Ukrainian,Indo-European,Thailand,25000000,Thai,pt
+Maithili,Dravidian,"Bangladesh, India",35000000,Perso-Arabic,am
+Awadhi,Indo-European,India,50000000,Latin,ru
+Japanese,Indo-European,"Afghanistan, Pakistan",25000000,Tamil,awa
+Pashto,Sino-Tibetan,Worldwide,60000000,Latin,pl
+Romanian,Turkic,India,341000000,Devanagari,mr
+Uzbek,Austronesian,Indonesia,50000000,Perso-Arabic,hsn
+Igbo,Turkic,Italy,341000000,"Shahmukhi, Devanagari",gu
+Marathi,Niger-Congo,Philippines,125000000,Oriya,jv
+Yue (Cantonese),Sino-Tibetan,Romania,23000000,Latin,am
+Burmese,Indo-European,Indonesia,24000000,Oriya,te
+Romanian,Koreanic,"India, Pakistan",24000000,Latin,ar
+Xiang (Hunanese),Sino-Tibetan,China (Hong Kong),918000000,Latin,mr
+Hindi,Indo-European,Iran,28000000,Latin,ur
+Jin,Indo-European,Indonesia,69000000,Ethiopic,vi
+Korean,Indo-Iranian,India,47000000,Chinese,or
+Awadhi,Dravidian,Iran,75000000,Latin,ig
+Hakka,Indo-European,"Pakistan, India",47000000,Chinese,es
+Marathi,Austronesian,Italy,76900000,Latin,nan
+Burmese,Niger-Congo,Philippines,27000000,"Shahmukhi, Devanagari",uz
+Hindi,Indo-European,Uzbekistan,22000000,Latin,it
+Uzbek,Afro-Asiatic,India,77000000,Ethiopic,pa
+Persian,Afro-Asiatic,Ukraine,73000000,Latin,su
+Hakka,Sino-Tibetan,India,221000000,Latin,ta
+Urdu,Koreanic,"Pakistan, India",67000000,Latin,uz
+Maithili,Indo-European,Italy,76000000,Latin,hi
+Italian,Indo-European,India,29000000,Latin,ja
+Wu (Shanghainese),Indo-European,"Pakistan, India",50000000,Latin,uz
+Bhojpuri,Indo-European,Indonesia,29000000,Latin,hsn
+Ukrainian,Afro-Asiatic,"Pakistan, India",75000000,Chinese,de
+Gujarati,Niger-Congo,Vietnam,25000000,Telugu,sd
+Pashto,Sino-Tibetan,Thailand,69000000,Traditional Chinese,kn
+Sindhi,Turkic,West Africa,82000000,Chinese,ha
+Romanian,Indo-European,China,60000000,Latin,bho
+Arabic,Indo-European,Indonesia,25000000,Latin,tl
+Bhojpuri,Indo-European,"Portugal, Brazil",35000000,"Kanji, Hiragana, Katakana",hi
+Gujarati,Indo-European,China,154000000,Thai,az
+Hakka,Afro-Asiatic,Vietnam,69000000,Tamil,yue
+Fula,Indo-European,India,83000000,Latin,wuu
+Southern Min,Afro-Asiatic,Myanmar,73000000,Latin,or
+Hindi,Indo-European,India,69000000,Thai,ml
+Tagalog,Sino-Tibetan,"Pakistan, India",24000000,Latin,fa
+Yue (Cantonese),Sino-Tibetan,Ukraine,47000000,Thai,mr
+Yoruba,Indo-European,China,50000000,Tamil,yue
+Marathi,Indo-European,"Middle East, North Africa",34000000,Simplified Chinese,pa
+Hausa,Austronesian,India,47000000,"Shahmukhi, Gurmukhi",ar
+Korean,Niger-Congo,Poland,27000000,Latin,nan
+Oromo,Niger-Congo,"Portugal, Brazil",221000000,"Kanji, Hiragana, Katakana",yue
+Bengali,Dravidian,China (Hong Kong),23000000,Latin,fa
+Korean,Indo-European,Uzbekistan,221000000,Latin,hi
+Xiang (Hunanese),Indo-European,China,32000000,"Kanji, Hiragana, Katakana",de
+Hausa,Indo-European,Worldwide,50000000,Devanagari,sd
+English,Indo-European,India,25000000,Arabic,mai
+Gujarati,Austronesian,"Germany, Austria",50000000,Bengali,de
+Jin,Japonic,Nigeria,75000000,Latin,ro
+Portuguese,Indo-European,"Germany, Austria",50000000,Burmese,pa
+Pashto,Sino-Tibetan,China,75000000,Cyrillic,it
+Arabic,Niger-Congo,"Afghanistan, Pakistan",20000000,Latin,ha
+Ukrainian,Indo-European,"Afghanistan, Pakistan",47000000,Latin,su
+Odia (Oriya),Indo-European,India,125000000,Latin,jv
+Thai,Dravidian,Uzbekistan,76000000,Latin,or
+Punjabi,Indo-European,Ethiopia,75000000,Arabic,mai
+Sundanese,Indo-European,India,341000000,Perso-Arabic,bn
+Bengali,Sino-Tibetan,West Africa,67000000,Latin,es
+Uzbek,Koreanic,Italy,24000000,"Shahmukhi, Devanagari",om
+Urdu,Indo-European,India,75000000,Latin,kn
