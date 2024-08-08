@@ -241,12 +241,15 @@ print(filedatanumerictxt>70)
 print(filedatanumerictxt[filedatanumerictxt>70])
 
 
-#Copiar un array de manera profunda
+#Copiar un array de manera profunda 
+
+#Si se quiere copiar un arreglo con algun filtro o condicion se debe primero filtrar y luego copiar.
 print("-----------------")
-copyfiledata = filedatanumerictxt[filedatanumerictxt.copy()>75]
+copyfiledata = filedatanumerictxt.copy()
 print(copyfiledata)
 
-
+#Uso de la funcion any
+print(np.any(filedatanumerictxt>75, axis=0))
 
 #Si intentamos cargar un archivo de texto con datos con caracteres especiales
 #Nos dara un error, ya que no puede convertirlos a numeros y lo que sucede es que 
