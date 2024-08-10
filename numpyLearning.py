@@ -227,7 +227,7 @@ print(abc[[1,2,8]])
 #Cargar un archivo de texto
 print("-----------------")
 
-filedatanumerictxt = np.genfromtxt('datanumeric.txt', delimiter=',')
+filedatanumerictxt = np.genfromtxt('./data/datanumeric.txt', delimiter=',')
 print(filedatanumerictxt)
 print("-----------------")
 
