@@ -132,3 +132,78 @@ print(coffee.iloc[:,[0,2]])
 print("\n")
 
 #Modificar un DataFrame
+
+print(coffee)
+print("\n")
+#Supongamos que quisiera modificar un dato en la columna Units Sold de la fila 1.
+#Se puede aplicar el concepto de rango con : para seleccionar por ejemplo 1:3 para seleccionar las filas 1 y 2 y 3
+coffee.loc[1,'Units Sold'] = 10
+print(coffee.head())
+print("\n")
+# Se puede utilizar la función .at[] para modificar un valor específico en un DataFrame.
+
+coffee.at[1,'Units Sold'] = 20
+
+print(coffee.head())
+print("\n")
+
+#Se puede utilizar la función .iat[] para modificar un valor específico en un DataFrame utilizando índices enteros.
+
+coffee.iat[1,2] = 30
+
+print(coffee.head())
+print("\n")
+#Se puede utilizar la funcion sort_values para ordenar un DataFrame por una o más columnas.
+print(coffee.sort_values('Units Sold'))
+print("\n")
+#Por default lo ordena ascendente asi que si quisieramos que se ordenara descendente seria de la sig manera:
+
+print(coffee.sort_values('Units Sold',ascending=False)) 
+print("\n")
+print(coffee.sort_values(['Coffee Type','Units Sold'],ascending=[True,False]))
+print("\n")
+#Se puede iterar pero se pierde mucha efiencia de memoria
+for index, row in coffee.iterrows():
+    print(index)
+    print(row['Units Sold'])
+    print("\n")
+
+#La funcion drop() permite eliminar filas o columnas de un DataFrame.
+
+#Eliminar una fila
+coffee_fila_eliminada = coffee.drop(2,axis=0)
+print(coffee_fila_eliminada)
+print("\n")
+#Eliminar una columna
+
+coffee_columna_eliminada = coffee.drop('Day',axis=1)
+print(coffee_columna_eliminada)
+print("\n")
+
+#El método rename() se utiliza para cambiar los nombres de las filas o columnas de un DataFrame.
+
+# Renombrar columnas
+df_renamed_columns = df.rename(columns={'Day': 'Weekday', 'Units Sold': 'Sales'})
+print("\nDataFrame después de renombrar las columnas:")
+print(df_renamed_columns)
+
+# Renombrar filas
+df_renamed_rows = df.rename(index={0: 'First', 1: 'Second'})
+print("\nDataFrame después de renombrar las filas:")
+print(df_renamed_rows)
+
+#El método replace() se utiliza para reemplazar valores específicos en un DataFrame.
+
+# Reemplazar valores en una columna
+df_replaced_values = df.replace({'Units Sold': {20: 25, 18: 30}})
+print("\nDataFrame después de reemplazar valores en la columna 'Units Sold':")
+print(df_replaced_values)
+
+# Reemplazar valores en todo el DataFrame
+df_replaced_all = df.replace({20: 25, 'Monday': 'Mon'})
+print("\nDataFrame después de reemplazar valores en todo el DataFrame:")
+print(df_replaced_all)
+
+"""
+FILTRADO DE DATOS
+"""
