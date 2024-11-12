@@ -186,24 +186,68 @@ print("\n")
 df_renamed_columns = df.rename(columns={'Day': 'Weekday', 'Units Sold': 'Sales'})
 print("\nDataFrame después de renombrar las columnas:")
 print(df_renamed_columns)
-
+print("\n")
 # Renombrar filas
 df_renamed_rows = df.rename(index={0: 'First', 1: 'Second'})
 print("\nDataFrame después de renombrar las filas:")
 print(df_renamed_rows)
-
+print("\n")
 #El método replace() se utiliza para reemplazar valores específicos en un DataFrame.
 
 # Reemplazar valores en una columna
 df_replaced_values = df.replace({'Units Sold': {20: 25, 18: 30}})
 print("\nDataFrame después de reemplazar valores en la columna 'Units Sold':")
 print(df_replaced_values)
-
+print("\n")
 # Reemplazar valores en todo el DataFrame
 df_replaced_all = df.replace({20: 25, 'Monday': 'Mon'})
 print("\nDataFrame después de reemplazar valores en todo el DataFrame:")
 print(df_replaced_all)
-
+print("\n")
 """
 FILTRADO DE DATOS
 """
+
+print(bios.info())
+print("\n")
+
+#filtrar por altura
+print(bios.loc[bios['height_cm'] > 215 ])
+print("\n")
+#filtrar por altura mayor a 215cm  que solo se vean los nombres y altura
+
+print(bios.loc[bios['height_cm'] > 215 , ['name','height_cm']])
+print("\n")
+
+#Filtrar por altura mayor a 215cm y que sean de USA
+print(bios.loc[(bios['height_cm'] > 215) & (bios['born_country'] == 'USA')])
+print("\n")
+#filtrar por altura mayor a 215cm  que solo se vean los nombres y altura y que sean de USA
+print(bios.loc[(bios['height_cm'] > 215) & (bios['born_country'] == 'USA'), ['name', 'born_country']])
+print("\n")
+
+#Filtrar por la columna name que contenga la palabra 'Keith'
+print(bios[bios['name'].str.contains('Keith')])
+print("\n")
+
+#Utilizaremos regex para filtrar
+
+print(bios[bios['name'].str.contains('keith|patrick', case = False)])
+print("\n")
+
+
+#Para filtrar por born_country que contenga USA, FRA o GBR
+
+print(bios[bios['born_country'].isin(['USA', 'FRA', 'GBR'])])
+
+print("\n")
+
+print(bios[bios['born_country'].isin(['USA', 'FRA', 'GBR']) & (bios['name'].str.contains('Keith'))])
+print("\n")
+#La funcion query se utiliza para filtrar filas de un DataFrame utilizando una expresión de consulta basada en una cadena. Este método permite
+# escribir consultas de una manera similar a SQL, lo que puede hacer que el código sea más legible y conciso.
+
+print(bios.query('born_country == "USA" '))
+print("\n")
+
+
