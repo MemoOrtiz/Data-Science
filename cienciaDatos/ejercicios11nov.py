@@ -1,13 +1,16 @@
 import numpy as np
 
 # Ejercicio 1
-
-# Matriz A : 3x2
-A_matriz = np.array([[-2, 3], [-5, 1], [0, -6]])
-# Matriz B : 2x3
-B_matriz = np.array([[1, -5, 0], [-8, 9, 2]])
-C_matriz1 = A_matriz.dot(B_matriz)
 print("\nEjercicio 1: \n")
+# Matriz A : 3x2
+A_matriz = np.array([[-2, 3], 
+                     [-5, 1], 
+                     [0, -6]])
+# Matriz B : 2x3
+B_matriz = np.array([[1, -5, 0], 
+                     [-8, 9, 2]])
+
+C_matriz1 = A_matriz.dot(B_matriz)
 print(C_matriz1)
 print()
 
