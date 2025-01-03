@@ -1,0 +1,33 @@
+STUDENT ID                                                           0
+Student Age                                                          0
+Sex                                                                  0
+Graduated high-school type                                           0
+Scholarship type                                                     0
+Additional work                                                      0
+Regular artistic or sports activity                                  0
+Do you have a partner                                                0
+Total salary if available                                            0
+Transportation to the university                                     0
+Accommodation type in Cyprus                                         0
+Mother’s education                                                   0
+Father’s education                                                   0
+Number of sisters/brothers                                           0
+Parental status                                                      0
+Mother’s occupation                                                  0
+Father’s occupation                                                  0
+Weekly study hours                                                   0
+Reading frequency                                                    0
+Reading frequency.1                                                  0
+Attendance to the seminars/conferences related to the department     0
+Impact of your projects/activities on your success                   0
+Attendance to classes                                                0
+Preparation to midterm exams 1                                       0
+Preparation to midterm exams 2                                       0
+Taking notes in classes                                              0
+Listening in classes                                                 0
+Discussion improves my interest and success in the course            0
+Flip-classroom                                                       0
+Cumulative grade point average in the last semester (/4.00)          0
+Expected Cumulative grade point average in the graduation (/4.00)    0
+COURSE ID                                                            0
+GRADE                                                                0
