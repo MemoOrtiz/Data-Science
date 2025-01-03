@@ -1,0 +1,487 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Proyecto Final</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../static/pages/assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="/pagePrincipal" class="logo"><strong>Pagina Principal</strong> ITS </a>
+								</header>
+
+							<!-- Banner -->
+								<section id="banner">
+									<div class="content">
+										<header>
+											<h1>Proyecto Final <br />
+											de la materia Ciencia de Datos</h1>
+											<p><h2>Guillermo Ortiz 22050370</h2>  </p>
+										</header>
+										<p>Este sistema permite usar 2 modelos entrenados de IA, uno de clasificación el cual consiste en la Predicción de accidente cerebrovascular en base a distintos parametros. El segundo modelo es de regresion acerca de calcular la calificación de un alumno con más de 20 distintas caracteristicas. </p>
+										
+									</div>
+									<span class="image object">
+										<img src="/../static/pages/images/datos.jpg" alt="" />
+									</span>
+								</section>
+			
+
+				<!-- Modelo de Clasificación -->
+    <section id="modelo-clasificacion">
+        <h2>Modelo de Clasificación: Predicción de accidente cerebrovascular</h2>
+        <form id="form-clasificacion">
+            <!-- Selección de Género -->
+            <label>Género:</label>
+            <select id="genero">
+                <option value="1">Hombre</option>
+                <option value="0">Mujer</option>
+            </select><br>
+
+            <!-- Edad -->
+            <label>Edad:</label>
+            <input type="number" id="age" min="1" required><br>
+
+            <!-- Hipertensión -->
+            <label>Hipertensión:</label>
+            <select id="hypertension">
+                <option value="0">No</option>
+                <option value="1">Sí</option>
+            </select><br>
+
+            <!-- Enfermedad Cardíaca -->
+            <label>Enfermedad Cardíaca:</label>
+            <select id="heart_disease">
+                <option value="0">No</option>
+                <option value="1">Sí</option>
+            </select><br>
+
+            <!-- Casado -->
+            <label>Casado:</label>
+            <select id="ever_married">
+                <option value="0">No</option>
+                <option value="1">Sí</option>
+            </select><br>
+
+            <!-- Tipo de Residencia -->
+            <label>Tipo de Residencia:</label>
+            <select id="residence_type">
+                <option value="0">Rural</option>
+                <option value="1">Urbana</option>
+            </select><br>
+
+            <!-- Nivel de Glucosa -->
+            <label>Nivel Promedio de Glucosa:</label>
+            <input type="number" id="avg_glucose_level" step="0.1" required><br>
+
+            <!-- IMC -->
+            <label>Índice de Masa Corporal (BMI):</label>
+            <input type="number" id="bmi" step="0.1" required><br>
+
+            <!-- Tipo de Trabajo -->
+            <label>Tipo de Trabajo:</label>
+            <select id="work_type">
+                <option value="0,0,0,0">Nunca Trabajó</option>
+                <option value="0,1,0,0">Privado</option>
+                <option value="0,0,1,0">Autónomo</option>
+                <option value="0,0,0,1">Niños</option>
+            </select><br>
+
+            <!-- Estado de Fumador -->
+            <label>Estado de Fumador:</label>
+            <select id="smoking_status">
+                <option value="1,0,0">Fumador Anterior</option>
+                <option value="0,1,0">Nunca Fumó</option>
+                <option value="0,0,1">Fuma</option>
+            </select><br>
+
+            <!-- Botón -->
+            <button type="button" onclick="hacerPrediccionClasificacion()">Hacer Predicción</button>
+        </form>
+		<div id="resultado-clasificacion" style="margin-top: 20px;">
+			<p style="font-size: 32px; font-weight: bold; color: #333; margin-top: 10px;">Resultado de Predicción de accidente cerebrovascular :</p>
+			<p id="resultado-texto" style="font-size: 32px; font-weight: bold; color: #333;  margin-top: 10px;">Pendiente</p>
+		</div>
+    </section>
+
+
+	<section id="modelo-regresion">
+		<h2>Modelo de Regresión: Predicción de Calificaciones de un alumno</h2>
+		<form id="form-regresion">
+			<!-- Edad del estudiante -->
+			<label for="edad">Edad del Estudiante:</label>
+			<select id="edad">
+				<option value="1">18-21</option>
+				<option value="2">22-25</option>
+				<option value="3">Mayor a 26</option>
+			</select><br>
+	
+			<!-- Sexo -->
+			<label for="sexo">Sexo:</label>
+			<select id="sexo">
+				<option value="1">Femenino</option>
+				<option value="2">Masculino</option>
+			</select><br>
+	
+			<!-- Tipo de escuela secundaria -->
+			<label for="escuela">Tipo de Escuela Preparatoria:</label>
+			<select id="escuela">
+				<option value="1">Privada</option>
+				<option value="2">Pública</option>
+				<option value="3">Otra</option>
+			</select><br>
+	
+			<!-- Tipo de beca -->
+			<label for="beca">Tipo de Beca:</label>
+			<select id="beca">
+				<option value="1">Ninguna</option>
+				<option value="2">25%</option>
+				<option value="3">50%</option>
+				<option value="4">75%</option>
+				<option value="5">Completa</option>
+			</select><br>
+	
+			<!-- Trabajo adicional -->
+			<label for="trabajo">Trabajo Adicional:</label>
+			<select id="trabajo">
+				<option value="1">Sí</option>
+				<option value="2">No</option>
+			</select><br>
+	
+			<!-- Actividad artística o deportiva -->
+			<label for="actividad">Actividad Artística/Deportiva Regular:</label>
+			<select id="actividad">
+				<option value="1">Sí</option>
+				<option value="2">No</option>
+			</select><br>
+	
+			<!-- Tiene pareja -->
+			<label for="pareja">¿Pareja?:</label>
+			<select id="pareja">
+				<option value="1">Sí</option>
+				<option value="2">No</option>
+			</select><br>
+	
+			<!-- Salario total -->
+			<label for="salario">Salario Total:</label>
+			<select id="salario">
+				<option value="1">USD 135-200</option>
+				<option value="2">USD 201-270</option>
+				<option value="3">USD 271-340</option>
+				<option value="4">USD 341-410</option>
+				<option value="5">Más de 410</option>
+			</select><br>
+	
+			<!-- Transporte a la universidad -->
+			<label for="transporte">Transporte a la Universidad:</label>
+			<select id="transporte">
+				<option value="1">Autobús</option>
+				<option value="2">Coche Privado/Taxi</option>
+				<option value="3">Bicicleta</option>
+				<option value="4">Otro</option>
+			</select><br>
+	
+			<!-- Tipo de alojamiento -->
+			<label for="alojamiento">Tipo de Alojamiento:</label>
+			<select id="alojamiento">
+				<option value="1">Renta</option>
+				<option value="2">Dormitorio</option>
+				<option value="3">Con familia</option>
+				<option value="4">Otro</option>
+			</select><br>
+	
+			<!-- Educación de la madre -->
+			<label for="educacion_madre">Educación de la Madre:</label>
+			<select id="educacion_madre">
+				<option value="1">Primaria</option>
+				<option value="2">Secundaria</option>
+				<option value="3">Preparatoria</option>
+				<option value="4">Universidad</option>
+				<option value="5">Maestría</option>
+				<option value="6">Doctorado</option>
+			</select><br>
+	
+			<!-- Educación del padre -->
+			<label for="educacion_padre">Educación del Padre:</label>
+			<select id="educacion_padre">
+				<option value="1">Primaria</option>
+				<option value="2">Secundaria</option>
+				<option value="3">Preparatoria</option>
+				<option value="4">Universidad</option>
+				<option value="5">Maestría</option>
+				<option value="6">Doctorado</option>
+			</select><br>
+	
+			<!-- Número de hermanos -->
+			<label for="hermanos">Número de Hermanos:</label>
+			<select id="hermanos">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5 o más</option>
+			</select><br>
+	
+			<!-- Estado parental -->
+			<label for="estado_parental">Estado Parental:</label>
+			<select id="estado_parental">
+				<option value="1">Casados</option>
+				<option value="2">Divorciados</option>
+				<option value="3">Fallecido (uno o ambos)</option>
+			</select><br>
+	
+			<!-- Ocupación de la madre -->
+			<label for="ocupacion_madre">Ocupación de la Madre:</label>
+			<select id="ocupacion_madre">
+				<option value="1">Jubilada</option>
+				<option value="2">Ama de Casa</option>
+				<option value="3">Funcionario Gubernamental</option>
+				<option value="4">Empleado del Sector Privado</option>
+				<option value="5">Autónoma</option>
+				<option value="6">Otra</option>
+			</select><br>
+	
+			<!-- Ocupación del padre -->
+			<label for="ocupacion_padre">Ocupación del Padre:</label>
+			<select id="ocupacion_padre">
+				<option value="1">Jubilado</option>
+				<option value="2">Funcionario Gubernamental</option>
+				<option value="3">Empleado del Sector Privado</option>
+				<option value="4">Autónomo</option>
+				<option value="5">Otro</option>
+			</select><br>
+	
+			<!-- Horas de estudio semanales -->
+			<label for="horas_estudio">Horas de Estudio Semanales:</label>
+			<select id="horas_estudio">
+				<option value="1">Ninguna</option>
+				<option value="2">&lt;5 horas</option>
+				<option value="3">6-10 horas</option>
+				<option value="4">11-20 horas</option>
+				<option value="5">Más de 20 horas</option>
+			</select><br>
+	
+			<!-- Frecuencia de lectura (libros/journals no científicos) -->
+			<label for="lectura_no_cientifica">Frecuencia de Lectura (Libros/Journals No Científicos):</label>
+			<select id="lectura_no_cientifica">
+				<option value="1">Ninguna</option>
+				<option value="2">A veces</option>
+				<option value="3">Frecuentemente</option>
+			</select><br>
+	
+			<!-- Frecuencia de lectura (libros/journals científicos) -->
+			<label for="lectura_cientifica">Frecuencia de Lectura (Libros/Journals Científicos):</label>
+			<select id="lectura_cientifica">
+				<option value="1">Ninguna</option>
+				<option value="2">A veces</option>
+				<option value="3">Frecuentemente</option>
+			</select><br>
+	
+			<!-- Asistencia a seminarios/conferencias -->
+			<label for="asistencia_seminarios">Asistencia a Seminarios/Conferencias Relacionadas con el Departamento:</label>
+			<select id="asistencia_seminarios">
+				<option value="1">Sí</option>
+				<option value="2">No</option>
+			</select><br>
+	
+			<!-- Impacto de proyectos/actividades -->
+			<label for="impacto_proyectos">Impacto de tus Proyectos/Actividades en tu Éxito:</label>
+			<select id="impacto_proyectos">
+				<option value="1">Positivo</option>
+				<option value="2">Negativo</option>
+				<option value="3">Neutral</option>
+			</select><br>
+	
+			<!-- Asistencia a clases -->
+			<label for="asistencia_clases">Asistencia a Clases:</label>
+			<select id="asistencia_clases">
+				<option value="1">Siempre</option>
+				<option value="2">A veces</option>
+				<option value="3">Nunca</option>
+			</select><br>
+	
+			<!-- Preparación para exámenes parciales 1 -->
+			<label for="preparacion_examen1">Preparación para Exámenes Parciales 1:</label>
+			<select id="preparacion_examen1">
+				<option value="1">Solo</option>
+				<option value="2">Con Amigos</option>
+				<option value="3">No Aplicable</option>
+			</select><br>
+	
+			<!-- Preparación para exámenes parciales 2 -->
+			<label for="preparacion_examen2">Preparación para Exámenes Parciales 2:</label>
+			<select id="preparacion_examen2">
+				<option value="1">Cerca de la Fecha del Examen</option>
+				<option value="2">Regularmente Durante el Semestre</option>
+				<option value="3">Nunca</option>
+			</select><br>
+	
+			<!-- Tomar apuntes en clases -->
+			<label for="tomar_apuntes">Tomar Apuntes en Clases:</label>
+			<select id="tomar_apuntes">
+				<option value="1">Nunca</option>
+				<option value="2">A veces</option>
+				<option value="3">Siempre</option>
+			</select><br>
+	
+			<!-- Escuchar en clases -->
+			<label for="escuchar_clases">Escuchar en Clases:</label>
+			<select id="escuchar_clases">
+				<option value="1">Nunca</option>
+				<option value="2">A veces</option>
+				<option value="3">Siempre</option>
+			</select><br>
+	
+			<!-- Discusión mejora interés y éxito -->
+			<label for="discusion_mejora">La Discusión Mejora mi Interés y Éxito en el Curso:</label>
+			<select id="discusion_mejora">
+				<option value="1">Nunca</option>
+				<option value="2">A veces</option>
+				<option value="3">Siempre</option>
+			</select><br>
+	
+			<!-- Flip-classroom -->
+			<label for="flip_classroom">Flip-Classroom:</label>
+			<select id="flip_classroom">
+				<option value="1">No Útil</option>
+				<option value="2">Útil</option>
+				<option value="3">No Aplicable</option>
+			</select><br>
+	
+			<!-- Promedio de calificaciones acumulado del último semestre -->
+			<label for="promedio_actual">Promedio de Calificaciones Acumulado del Último Semestre (/4.00):</label>
+			<select id="promedio_actual">
+				<option value="1">&lt;2.00</option>
+				<option value="2">2.00-2.49</option>
+				<option value="3">2.50-2.99</option>
+				<option value="4">3.00-3.49</option>
+				<option value="5">Más de 3.49</option>
+			</select><br>
+	
+			<!-- Promedio de calificaciones acumulado esperado en la graduación -->
+			<label for="promedio_esperado">Promedio de Calificaciones Acumulado Esperado en la Graduación (/4.00):</label>
+			<select id="promedio_esperado">
+				<option value="1">&lt;2.00</option>
+				<option value="2">2.00-2.49</option>
+				<option value="3">2.50-2.99</option>
+				<option value="4">3.00-3.49</option>
+				<option value="5">Más de 3.49</option>
+			</select><br>
+	
+			<!-- Botón para enviar los datos -->
+			<button type="button" onclick="hacerPrediccionRegresion()">Hacer Predicción</button>
+		</form>
+	
+		<!-- Resultado -->
+		<div id="resultado-regresion" style="margin-top: 20px;">
+			<p style="font-size: 32px; font-weight: bold; color: #333; margin-top: 10px;">Resultado a la predicción de calificación:</p>
+			<p id="resultado-texto-regresion" style="font-size: 24px; font-weight: bold; color: #333;">Pendiente</p>
+		</div>
+	</section>
+				
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Una herramienta para identificar mediante Inteligencia Artificial predicción de accidente cerebrovascular y predicción de calificaciones</h2>
+									</header>
+									<div class="features">
+										<article>
+											<span class="icon fa-gem"></span>
+											<div class="content">
+												<h3>Esta pagina se encuentra en desarrollo</h3>
+												<p>Es posible que algunas funcionalidades esten deshabilitadas</p>
+											</div>
+										</article>
+										<article>
+											<span class="icon solid fa-paper-plane"></span>
+											<div class="content">
+												<h3>Sistema de Predicción de regresión y Clasificación </h3>
+												<p>Planificada para Ciencia de Datos aplicable a otras instituciones</p>
+											</div>
+										</article>
+										<article>
+											<span class="icon solid fa-rocket"></span>
+											<div class="content">
+												<h3>Desarrollada por Guillermo Ortiz</h3>
+												<p>Este proyecto es para el area de analisis de datos.</p>
+											</div>
+										</article>
+										<article>
+											<span class="icon solid fa-signal"></span>
+											<div class="content">
+												<h3>El proyecto mas interesante a nivel estudiantil</h3>
+												<p>Hecha para la materia de Ciencia de Datos.</p>
+											</div>
+										</article>
+									</div>
+								</section>
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+				<div id="sidebar">
+					<div class="inner">
+
+						<!-- Search -->
+							<section id="search" class="alt">
+								<form method="post" action="#">
+									<input type="text" name="query" id="query" placeholder="Search" />
+								</form>
+							</section>
+
+						<!-- Menu -->
+							<nav id="menu">
+								<header class="major">
+									<h2>Menu</h2>
+								</header>
+								<ul>
+									<li><a href="/pagePrincipal">Homepage</a></li>
+									
+								</ul>
+							</nav>
+							<section>
+								<header class="major">
+									<h2>Contacto</h2>
+								</header>
+								<p>Si tienes alguna duda, pregunta o necesitas asistencia con el Sistema de Prediccion, no dudes en contactarnos.</p>
+
+									<p> Disponemos de diversos canales de atención para atenderte de manera oportuna y eficaz: </p>
+								<ul class="contact">
+									<li class="icon solid fa-envelope"> L22050370@saltillo.tecnm.mx </li>
+									<li class="icon solid fa-phone">(844) 119-2929</li>
+									<li class="icon solid fa-home">Blvd. Venustiano Carranza, Priv. Tecnológico 2400<br />
+										25280 Saltillo, Coahuila</li>
+								</ul>
+							</section>
+						</div>
+				</div>
+				
+			</div>
+
+		<!-- Scripts -->
+			<script src="../static/pages/assets/js/jquery.min.js"></script>
+			<script src="../static/pages/assets/js/browser.min.js"></script>
+			<script src="../static/pages/assets/js/breakpoints.min.js"></script>
+			<script src="../static/pages/assets/js/util.js"></script>
+			<script src="../static/pages/assets/js/main.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+       		<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+
+        <!--  Scripts -->
+        <script src="../static/pages/assets/js/clasificacion.js"></script>
+    	<script src="../static/pages/assets/js/regresion.js"></script>
+
+	</body>
+
+</html>
