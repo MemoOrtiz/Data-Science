@@ -1,7 +1,12 @@
 numpy
 openpyxl
 pandas
+matplotlib
+matplotlib-inline
+seaborn
+scikit-learn
 pyarrow
 pyjanitor
 ipykernel
 jupyter
+Flask 
