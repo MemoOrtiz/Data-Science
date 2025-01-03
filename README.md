@@ -1,5 +1,5 @@
 
-# Numpy and Pandas Learning
+# Data Science Learning and Projects
 Este documento proporciona instrucciones detalladas para configurar y ejecutar el proyecto en su entorno local, cubriendo tanto sistemas Linux/Mac como Windows.
 
 ## Prerrequisitos
